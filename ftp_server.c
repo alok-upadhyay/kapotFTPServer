@@ -1,4 +1,4 @@
-/* Title	:	AlokFTP - A minimal FTP server						*/
+/* Title	:	kapotFTP - A minimal FTP server						*/
 /* Source	:	ftp_server.c 								*/	
 /* Date		:	09/03/2012	   							*/
 /* Author	:	Alok Upadhyay	   							*/
@@ -54,7 +54,7 @@ int sin_size, sin_size2;
 int main()
 {
 	/*Defining the prompt*/
-	char prompt[] = "alokFTP:~>";
+	char prompt[] = "kapotFTP:~>";
 	strcpy(send_data, prompt);
 	
 	control_port = CONTROL_PORT_NO;
@@ -138,7 +138,7 @@ void serveClients()
 	      send(connected, send_data,strlen(send_data), 0);  
 	      strcpy(response, "");
 	      strcpy(buffer, "");	
-	      strcpy(send_data, "alokFTP:~>");
+	      strcpy(send_data, "kapotFTP:~>");
 
 	
               bytes_recieved = recv(connected, recv_data, 1024, 0);
